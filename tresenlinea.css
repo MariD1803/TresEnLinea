@@ -272,7 +272,7 @@ body {
 }
 
 .prueba{
-  background-image: url("./tuberia.png");
+  background-image: url("./imagenes/tuberia.png");
     width: 300px;
     height: 300px;
     z-index: 999;

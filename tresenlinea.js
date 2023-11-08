@@ -19,11 +19,11 @@ setTimeout(()=>{
 }
 
 const audio = new Audio()
-audio.src = './mario-bros tuberia.mp3'
+audio.src = './sonidos/mario-bros tuberia.mp3'
 const win = new Audio()
-win.src = './mario-bros.mp3'
+win.src = './sonidos/mario-bros.mp3'
 const buttonClick = new Audio()
-buttonClick.src = './Mouse_Click.mp3'
+buttonClick.src = './sonidos/Mouse_Click.mp3'
 
 
 const app = Vue.createApp({
