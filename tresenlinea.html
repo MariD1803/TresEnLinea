@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tres En Linea</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="tresenlinea.css">
+    <link rel="stylesheet" href="mediaquery.css">
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="tresenlinea.js" defer></script>
+
+   
+   
+   
+     
+   
+   
+     
+</head>
+<body>
+    <div class="spinner hidden"><div class="prueba"></div><div class="mario-spinner"></div></div>
+    <section id="app" >
+
+        
+        
+
+        <div class="menu active">
+            <h2 >Juguemos Tres en Línea</h2>
+            <div class="welcome">
+                <div class="mario"></div>
+                <div class="message-mario">Elige una forma de juego</div>
+            </div>
+
+            <div class="buttons">
+                <div class="shadow-button"><button class="button-choice" @click="setDisplayCPU()" onclick="audio.play()">CPU</button></div>
+                <div class="shadow-button" @click="setDisplay2Players"><button class="button-choice" onclick="audio.play()">2 Jugadores</button></div>
+            </div>
+            
+            
+            
+        </div>
+
+       
+        <div id="tresEnLinea2Players" class="hidden">
+
+                         
+            
+
+
+            <div class="contenedor-juego">
+
+                <div id="button-start" class="shadow-button"><button class="button-choice" @click="setStart" onclick="buttonClick.play()">Iniciar Juego</button></div>
+                
+                
+                <div class="cronometro hidden">
+                    <p>Tiempo</p>
+                    <div id="hms"></div>
+                </div>
+                <div id="juego-titulo" class="juego-titulo"><h2>P1 vs P2</h2></div>
+                <p id = "juego-info" class="juego-info hidden"> Le toca al jugador {{jugador}}</p>
+
+                
+         
+                
+        
+                    <board-game>
+
+                        <button-game v-for="(celda, index) in tablero" :key="index" @click="setFicha(index)" onclick="buttonClick.play()">{{celda}}</button-game>
+                    </board-game>
+                
+                    
+                    
+               
+                    <div class="modal-container hidden" id="modal-container">
+                        <div class="modal">
+                            <h1 id="mensajeGanador" class="hidden" >Ganaste jugador {{jugador}}!</h1>
+                            <h1 id="mensajeEmpate" class="hidden"> ¡Empate!</h1>
+                            <div class="iconos-container">
+                                <button @click="restart" onclick="buttonClick.play()"  class="button-iconos icono1"><i class="fa-solid fa-rotate-right iconos" ></i></button>
+                                <button class="button-iconos icono2"  @click="setBackMenu"><i  class="fa-solid fa-house iconos"></i></button>
+                            </div>
+                        </div>
+                    </div>
+    
+                
+                    <div class="container-buttons">
+                    
+                        <div class="shadow-button-red"><button onclick="buttonClick.play()" id ="juego-boton" class="juego-boton hidden" @click="restart">Volver a jugar</button></div>
+                        <div class="shadow-button-red"><button class="juego-boton" @click="setBackMenu">Volver Al Menú</button></div>
+                    </div>
+               
+            </div>
+        </div>
+
+
+
+        <div id="tresEnLineaCPU" class="hidden">
+
+                         
+            
+
+
+            <div class="contenedor-juego">
+
+                <div id="button-start-cpu" class="shadow-button"><button class="button-choice" @click="setStart" onclick="buttonClick.play()" >Iniciar Juego</button></div>
+                
+                
+                <div class="cronometro-modocpu cronometro hidden">
+                    <p>Tiempo</p>
+                    <div id="hms2"></div>
+                </div>
+                <div id="juego-titulo-cpu" class="juego-titulo" ><h2>P1 vs CPU</h2></div>
+                <p id = "juego-info-cpu" class="juego-info hidden"> Le toca a el {{setJugador()}}</p>
+
+                
+         
+                <board-game id="cuadricula2">
+
+                    <button-game v-for="(celda, index) in tablero" :key="index" @click="setFichaCPU(index)" onclick="buttonClick.play()">{{celda}}</button-game>
+                </board-game>
+        
+                    
+                    
+               
+                    <div class="modal-container hidden" id="modal-container-cpu">
+                        <div class="modal">
+                            <h1 id="mensajeGanadorCPU" class="hidden" > Ganó la "{{ganador}}", es decir el {{setGanadorCPU()}}!</h1>
+                            <h1 id="mensajeEmpateCPU" class="hidden"> ¡Empate!</h1>
+                            <div class="iconos-container">
+                                <button @click="restart" onclick="buttonClick.play()" class="button-iconos icono1"><i class="fa-solid fa-rotate-right iconos" ></i></button>
+                                <button class="button-iconos icono2"  @click="setBackMenu "><i  class="fa-solid fa-house iconos"></i></button>
+                            </div>
+                        </div>
+                    </div>
+    
+                
+                
+                <div class="container-buttons">
+                    
+                    <div class="shadow-button-red"><button id ="juego-boton-cpu" class="juego-boton hidden" @click="restart" onclick="buttonClick.play()">Volver a jugar</button></div>
+                    <div class="shadow-button-red"><button  class="juego-boton" @click="setBackMenu" >Volver Al Menú</button></div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        
+        
+        
+    </section>
+    
+
+    
+    
+</body>
+</html>

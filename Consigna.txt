@@ -1,0 +1,40 @@
+Crear un archivo llamado tresenlinea.html que implemente una juego de 3 en Linea (o tateti, o 3 en raya, o ceros y cruces) en html/javascript
+
+Requisitos Funcionales:
+Debe cumplir las reglas estandares del 3 en Linea.
+Referencia: https://es.wikipedia.org/wiki/Tres_en_l%C3%ADnea
+
+Dede tener 2 modos:
+1. Jugador vs Jugador
+2. Jugador vs Computador
+
+En el modo Jugador vs Computador:
+Quien juegue el 1er turno debe ser aleatorio
+No es requisito que el computador juegue de manera coherente o inteligente, aunque en caso de hacerlo sera considerado con puntos adicionales
+
+Para realizar su jugada, el jugador debe hacer click sobre alguna de las casillas libres
+
+Requisitos visuales:
+Tablero con los 9 cuadrados
+Visualizacion del modo de juego actual (jugador 1 vs jugador 2 o jugador 1 vs computador)
+Visualizacion de a que jugadores le corresponde posicionar la siguiente ficha
+Visualizacion del final del juego cuando se alcance un ganador o empate y boton para volver a empezar seleccionando nuevamente el modo de juego
+
+
+Requisitos Tecnicos Obligatorios (no seran consideradas respuestas que no cumplan con alguno de estos 4 requisitos):
+Debe realizarse utilizando Vue.js (https://vuejs.org/)
+No esta permitido utilizar jQuery ni ninguna otra libreria mas alla de Vue.js.
+Utilizar al menos 2 componentes Vue.js: uno para el tablero y otro que represente a cada ficha o posicion dentro del tablero
+
+IMPORTANTE:
+El archivo debe ser autocontenido, no debe requerir de ningun servidor para funcionar. solo debe incluir un link externo a la libreria de Vue.js:  
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+No se debe utilizar vue-cli, ni vue-loader, ni webpack, ni archivos .vue. Simplemente deber se un archivo html con sus componentes incluidos dentro de tags <script></script>
+
+
+
+
+
+
+
+

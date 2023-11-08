@@ -1,0 +1,140 @@
+@media (max-width: 1100px) {
+
+    .shadow-button {
+        width: 22%;
+    }
+
+    #mensajeGanadorCPU, #mensajeEmpateCPU{
+        text-align: center;
+        /* width: 93%; */
+        padding: 20px;
+        line-height: 1.5em;
+    }
+    
+}
+@media (max-width: 840px) {
+
+    .welcome{
+    width: 80%;
+    justify-content: flex-end;
+    }
+
+    .button-choice, .juego-boton {
+        font-size: 15px;
+    }
+
+    .mario {
+        height: 12px;
+        width: 12px;
+        top: 20%;
+        scale: 0.55;
+        left: 28%;
+        
+    }
+
+    .message-mario {
+        
+        padding: 20px;
+        font-size: 12px;
+        width: 130px;
+      
+    }
+
+    .modal h1 {
+        font-size: 18px;
+    }
+
+    
+}
+@media (max-width: 648px) {
+
+    .shadow-button {
+        width: 30%;
+    }
+
+    
+    .button-choice, .juego-boton {
+        font-size: 9px;
+        font-weight: 600;
+    }
+
+    .mario {
+        height: 14px;
+        width: 14px;
+        scale: 0.4;
+        top: 35%;
+        
+    }
+
+    .message-mario {
+        
+        padding: 14px;
+        font-size: 8px;
+        width: 100px;
+      
+    }
+    .juego-titulo h2{
+        width: 300px;
+    }
+
+    .cuadro{
+        height: 80px;
+        width: 80px;
+    }
+
+    
+
+    .juego-cuadricula {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        grid-gap: 4px;
+        width: 240px;
+        margin: 0 auto;
+    }
+
+    .iconos{
+        font-size: 40px;
+    }
+
+    .modal {
+        width: 90%;
+    }
+
+    
+    .menu h2{
+        font-size: 18px;
+    }
+
+    
+    @keyframes mario {
+        0% {
+        top: 200px;
+        }
+        5% {
+        top: 180px;
+        }
+        39% {
+        top: 150px;
+        }
+        45% {
+        top: 160px;
+        }
+        60% {
+        top: 180px;
+        }
+        100% {
+        top: 200px;
+        }
+    }
+
+    #welcomeApp h2 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 360px) {
+
+    
+    .welcome{
+        width: 97%;
+    }
+}
